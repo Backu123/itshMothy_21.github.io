@@ -27,4 +27,4 @@ insert into tb3(Book_Name, Book_Number, Stocks)values("It Ends With Us", 10004, 
 insert into tb3(Book_Name, Book_Number, Stocks)values("It Starts With Us", 10005, 523);
 
 select * from tb1, tb2, tb3 where tb1.Book_Number=tb2.Book_Number && tb1.Book_Number=tb3.Book_Number;
-
+Exit
