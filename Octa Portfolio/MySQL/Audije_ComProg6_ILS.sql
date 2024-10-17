@@ -77,4 +77,8 @@ insert into tb5(Book_Name, Book_Number, Stocks)values("It Starts With Us", 10005
 select * from tb2, tb4, tb5 where tb2.Book_Number=tb4.Book_Number && tb2.Book_Number=tb5.Book_Number;
 Exit
 mysqldump -u root db > C:\Users\ASUS\Downloads\Database\db.sql
+
+mysql -u root
+create database db2;
+Exit
 mysql -u root db2 < C:\Users\ASUS\Downloads\Database\db.sql
