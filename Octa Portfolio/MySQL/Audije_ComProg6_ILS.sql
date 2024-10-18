@@ -8,7 +8,7 @@ create table tb2(Name varchar(50), ID int(11));
 desc tb1;
 desc tb2;
 drop table tb1;
-drop table tb2;	
+drop table tb2;
 drop database db;
 create database db;
 use db;
@@ -54,7 +54,6 @@ update tb3 set Age=40, Sex="M" where Name="Marg";
 delete from tb3;
 delete from tb3 where CN=3;
 
-//tb2 table
 create table tb4(ID int(3)primary key auto_increment not null, Book_Name varchar(50), Book_Number int(5));
 insert into tb4(Book_Name, Book_Number)values("LTS", 10001);
 insert into tb4(Book_Name, Book_Number)values("CTS", 10002);
@@ -76,9 +75,19 @@ insert into tb5(Book_Name, Book_Number, Stocks)values("It Ends With Us", 10004, 
 insert into tb5(Book_Name, Book_Number, Stocks)values("It Starts With Us", 10005, 523);
 select * from tb2, tb4, tb5 where tb2.Book_Number=tb4.Book_Number && tb2.Book_Number=tb5.Book_Number;
 Exit
-mysqldump -u root db > C:\Users\ASUS\Downloads\Database\db.sql
+mysqldump -u root db > C:\Users\ASUS\Documents\db.sql
 
 mysql -u root
 create database db2;
+show tables;
 Exit
-mysql -u root db2 < C:\Users\ASUS\Downloads\Database\db.sql
+mysql -u root db2 < C:\Users\ASUS\Documents\db.sql
+mysql -u root
+show databases;
+use db2;
+show tables;
+select * from tb1;
+select * from tb2;
+select * from tb3;
+select * from tb4;
+select * from tb5;
